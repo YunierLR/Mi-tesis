@@ -1,1 +1,8 @@
-echo "Esto es una prueba"
+pipeline{
+  stages{
+    stage(Desarrollo)
+      step{
+        echo "Esto es una prueba"
+      }
+  }
+}
