@@ -1,0 +1,339 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./IMG/123.jpg);
+    backdrop-filter: blur(70px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Titulo */
+
+#Titulo_Proyecto{
+    display: flex;
+    border:none;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    animation-name: titulo;
+    animation-duration: 2s;
+}
+
+@keyframes titulo{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+#Gestor {
+    font-size: 3em;
+    color: transparent;
+    background-color: #fff;
+    background-clip: text;
+}
+
+
+/* Contenedor de Bienvenida */
+.contenedor{
+    display: flex;
+    max-width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    transition: all 1s ease;
+    margin: 10px;
+}
+
+.informacion{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    /* border:  rgb(255, 255, 255) solid 1px; */
+    text-align: center;
+    /* background-image: linear-gradient(rgb(255, 60, 0),#ff9d00); */
+    background-image: url(./IMG/321.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+    box-shadow: 1px 3px 10px rgb(0, 0, 0);
+    transition: all 1s ease;
+    animation-name: formulario;
+    animation-duration: 2s;
+}
+div section div img{
+        position: relative;
+        bottom: 20px;
+    }
+
+.componentes-de-informacion{
+    padding: 0 30px;
+    width: 100%;
+
+    h2{
+        font-size: 2.5rem;
+        color: rgb(255, 255, 255);
+    }
+
+    p{
+        margin: 25px 0;
+        color: #ffffff;
+    }
+
+    a{
+        background-color: transparent;
+        border-radius: 20px;
+        outline: none;
+        padding: 10px 20px ;
+        color: #ffffff;
+        border: #ffffff solid thin;
+        cursor:pointer;
+        transition: .5s ease;
+        width: 180px;
+        text-decoration: none;
+    }
+
+    a:hover{
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        transition:.5s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    a:active{
+        scale:0.9;
+        transition: 0.2s;
+    }
+}
+
+
+/* Login */
+
+.formulario{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+    /* background-color: #f8f8f8; */
+    background: transparent;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+    animation-name: formulario1;
+    animation-duration: 2s;
+}
+
+@keyframes formulario {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes formulario1 {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.componentes-del-formulario{
+    padding: 0 30px;
+
+    h2{
+        font-size: 2.5rem;
+        color: rgb(255, 255, 255);
+        margin-bottom: 15px;
+    }
+
+    p{
+        color:#ffffff;
+    }
+
+    .Elementos-formulario{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+lord-icon{
+    position: relative;
+    bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        margin-top: 5px;
+        color: rgb(1, 98, 255);
+        transition: 0.5s;
+    }
+
+    a:hover{
+        color: rgb(0, 17, 250);
+        transition: 0.5s;
+        text-shadow: 0px 0px 20px rgb(0, 0, 0);
+    }
+
+}
+
+.contenedor_inputs {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.input-con-icon {
+    position: relative;
+}
+
+.input-con-icon .iconos_iniciar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 41px;
+    color: #888;
+}
+
+.input-con-icon .iconos_regis {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+    color: #888;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    padding-left: 38px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: 0.1s ease;
+}
+
+input:focus {
+    outline: none;
+    border-left: 3px solid #076111c3;
+    transition: 0.1s ease;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.error-msg {
+    color: #E53935;
+    font-size: 12px;
+}
+
+input[type="submit"] {
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.676);
+    transition: 0.3s ease;
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid white;
+    width:150px;
+}
+
+.form input[type="submit"]:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    scale: 1.1;
+    transition: 0.3s ease;
+}
+span{
+    color:white;
+}
+hr{
+    margin-bottom: 5px;
+}
+
+
+/* Responsive */
+@media screen and (max-width:750px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .contenedor{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .informacion{
+        width: 100%;
+        height: 39vh;
+        padding: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        border: 1px solid white;
+    }
+
+    .formulario{
+        width: 100%;
+        height: 60vh;
+        padding: 20px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border: 1px solid white;
+        *{
+            margin: 0;
+        }
+    
+        ion-icon{
+            font-size: 25px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        label{
+            margin: 2px;
+            
+        }
+
+    }
+}
+
+.my-swal-class{
+    border: #000000 solid 2px;
+}

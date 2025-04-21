@@ -1,0 +1,1550 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* footer{
+    text-align: center;
+    background-color: rgb(4, 166, 109);
+    h1{
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 18px;
+    }
+} */
+
+.barra_navegacion{
+    width: 300px;
+    height:100vh;
+    background-color: rgb(4, 211, 139);
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    
+
+    text-align: center;
+
+    .encabezado_navegacion{
+        text-align: center;
+
+        h1{
+            color: white;
+            font-size: 40px;
+        }
+    }
+   
+
+    .links_navegacion{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+    }
+
+    a{
+        display: flex;
+        width: 100%;
+        padding: 10px 15px;
+        transition: 0.5s ease;
+        align-items: center;
+        gap: 10px;
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+
+        .ico-icons{
+            font-size: 25px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+    }
+
+    a:active{
+        background-color: green;
+    }
+    
+    .link{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    }    
+
+    .link_inicio{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 23px;
+    }
+
+}
+
+.ocultar{
+    width: 0px;
+    transition: 0.5s ease;
+}
+
+.opacidad{
+    opacity: 0;
+    width: 0;
+    display: none;
+    transition: 0.5s ease;
+}
+
+/* Hover */
+
+.barra_navegacion a:hover{
+    background-color: #9cffd98d;
+    transition: 0.5s ease;
+}
+
+.menu:hover{
+    scale: 1.3;
+    transition: 0.4s ease;
+}
+
+.contenedor{
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+
+.header{
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    background-color: rgb(4, 211, 139);
+    z-index: 10;
+    position: relative;
+    
+
+    h1{
+        width: 65%;
+        text-align: center;
+        color: rgb(255, 255, 255); 
+        font-weight: 400;
+        font-size: 40px;
+    }
+
+    .lista_links{
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+        width: 35%;
+        align-items: center;
+        
+    }
+    .menu{
+        font-size: 56px;
+        border-radius: 50%;
+        color: #ffffff;
+        cursor: pointer;
+        transition: 0.8s ease;
+        margin-left: 5px;
+        width: 50px;
+        font-size: 30px;
+    }
+
+    .a_home{
+        color:#ffffff;
+        font-size: 18px;
+        font-weight: 400;
+        transition: 0.3s;
+        text-decoration: none;
+
+    }
+
+}
+
+.inicio_header{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+
+.a_home:hover{
+    color:#000000;
+    transition: 0.3s;
+}
+
+.persona{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin_header{
+    font-size: 14px;
+    color: rgb(183, 236, 203);
+}
+
+
+.user_header{
+    font-size: 18px;
+    color: rgb(237, 237, 237);
+}
+
+.log_out{
+    color:#ffffff;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.log_out:hover{
+    color:#000000;
+    transition: 0.3s;
+}
+
+
+.ubicacion{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: #04d38b;
+    height: 50px;
+    align-items: center;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+    ion-icon{
+        color:#ffffff;
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 18px;
+        color:#ffffff
+    }
+
+    h5{
+        color: #ffffff;
+        font-size: 20px;
+    }
+    .elementos{
+        display: flex;
+    }
+}
+
+
+
+.visibles{
+	display:flex;
+	flex-direction: column;
+}
+
+.tabla{
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    height: 40px;
+}
+
+.barra_encabezado {
+    background-color: #262525;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 15px;
+    font-weight: bold;
+    position: sticky;  /* Hace que la cabecera quede fija */
+    top: 0;  /* Fija la cabecera en la parte superior */
+    z-index: 10;  /* Asegura que la cabecera esté por encima del contenido */
+    border: 1px solid #262525;
+}
+
+.barra_encabezado th {
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.barra_encabezado th:last-child {
+    border-right: none;
+}
+
+
+.encabezado_navegacion{
+    img{
+        width: 200px;
+    }
+}
+
+.tabla-container {
+    max-height: 450px; /* Ajusta la altura según tu diseño */
+    overflow-y: auto; /* Habilita el scroll vertical cuando sea necesario */
+    border: 1px solid #ddd; /* Opcional: para agregar un borde alrededor del contenedor */
+}
+
+.tabla th, .tabla td {
+    border-bottom: 1px solid #ddd;
+}
+
+th{
+    border:#262525 solid 1px;
+    padding: 10px 10px;
+}
+
+
+td{
+    padding: 5px 5px;
+    
+}
+
+.trdescarga{
+    text-align:start;
+
+    a{
+        color:rgb(4, 117, 187);
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+
+    a:hover{
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+}
+
+.list{
+    font-weight: 400;
+    margin: 5px;
+}
+
+.anadir{
+    padding: 10px 15px;
+    background-color: #000000;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    height: 35px;
+}
+
+.anadir:hover{
+    scale:1.1;
+    transition: 0.2s;
+}
+
+.anadir:active{
+    scale:0.9;
+    transition: 0.2s;
+}
+
+.eliminar {
+    padding: 8px 2px;
+    background: linear-gradient(135deg, #e52d27, #b31217); /* Degradado rojo intenso */
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover con sombra y cambio de color */
+.eliminar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d32f2f, #a91c1c);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de clic con reducción de tamaño */
+.eliminar:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+/* Agregar un pequeño icono antes del texto */
+.eliminar::before {
+    font-size: 16px;
+}
+
+/* Animación de fondo al hacer clic */
+.eliminar:focus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.eliminar:focus {
+    outline: none;
+}
+
+.eliminar:focus::after {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+/* Botón de modificar con estilo moderno y profesional */
+.modificar {
+    padding: 8px 2px;
+    background: linear-gradient(135deg, #e7dc0c, #f0d806); /* Degradado amarillo */
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover con cambio de color */
+.modificar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d4c30b, #e5c800);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de clic con reducción de tamaño */
+.modificar:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+/* Agregar un pequeño icono antes del texto */
+.modificar::before {
+    font-size: 16px;
+}
+
+/* Animación de fondo al hacer clic */
+.modificar:focus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.modificar:focus {
+    outline: none;
+}
+
+.modificar:focus::after {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+/* Botón "Ver Más" con estilo moderno */
+.verMas {
+    padding: 8px 2px;
+    background: linear-gradient(135deg, #04d38b, #02c47b);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 80px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover con ligera vibración */
+.verMas:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Efecto de clic con reducción de tamaño */
+.verMas:active {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
+
+
+/* Efecto pulsante al hacer clic */
+.verMas:focus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.verMas:focus {
+    outline: none;
+}
+
+.verMas:focus::after {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+
+.descargar {
+    padding: 10px 2px;
+    background: linear-gradient(135deg, #2847f7, #02c47b);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icono de descarga */
+.descargar::before {
+    font-size: 16px;
+}
+
+/* Efecto hover con iluminación */
+.descargar:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de clic con reducción de tamaño */
+.descargar:active {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
+
+/* Efecto pulsante al hacer clic */
+.descargar:focus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.descargar:focus {
+    outline: none;
+}
+
+.descargar:focus::after {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+#nav_bar1{
+    height: 190px;
+}
+
+
+.iconos_opc{
+    text-align: center;
+    font-size: 20px;
+}
+
+.no_vulnerabilidades{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+
+    h4{
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    img{
+        width: 500px;
+        margin-top: 10px;
+    }
+
+}
+
+.div_1{
+    display: flex;
+    flex-direction: row;
+}
+
+.enlace_contra{
+    text-decoration: none;
+    color: #05a56d;
+    transition: 0.2s;
+}
+
+
+.enlace_contra:hover{
+    color: #035f3e;
+    transition: 0.2s;
+}
+
+.pagination {
+    margin: auto;
+}
+
+.a_paginator {
+    color: #ffffff;
+    font-size: 25px;
+    background-color: #04d38b;
+    padding: 0 10px;
+    transition: 0.1s ease;
+    text-decoration: none;
+}
+
+.current {
+    color: #ffffff;
+    font-size: 25px;
+    background-color: #026945;
+    padding: 5px 10px 0px;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+
+.a_paginator:hover, .current:hover {
+    background-color: #026945;
+}
+
+
+.contenedor_buscador {
+    display: flex;
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Alinear los elementos a los extremos */
+    padding: 5px;
+
+    h2{
+        font-weight: 400;
+    }
+}
+
+.buscador {
+    display: flex;
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.input_busqueda {
+    width: 200px; /* Ancho del campo de búsqueda */
+    padding: 5px; /* Espaciado interior */
+    border: 1px solid #ccc; /* Borde del campo de búsqueda */
+    border-radius: 20px; /* Radio de borde */
+    padding-left: 15px;
+}
+
+.input_busqueda:focus {
+    outline:solid thin  #666;
+    box-shadow: inset 1px 1px 10px #666;
+}
+
+.form_busq{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+.boton_busqueda{
+    margin-right: 8px; /* Espacio entre el botón y el input */
+    height: 36px; /* Altura del botón */
+    width: 36px;
+    background-color: transparent;
+    outline: none;
+    border: solid 1px white;
+    border-radius: 20px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.boton_busqueda:hover{
+    background-color: #035f31;
+    color: #fff;
+    scale: 1.01;
+    transition: 0.2s ease;
+}
+
+.boton_busqueda:focus{
+    scale: .9;
+    transition: 0.1s ease-out;
+}
+
+.icono_busqueda{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+select {
+    width: 200px; /* Ancho del campo de búsqueda */
+    padding: 5px; /* Espaciado interior */
+    border: 1px solid #ccc; /* Borde del campo de búsqueda */
+    border-radius: 20px; /* Radio de borde */
+    padding-left: 15px;
+    padding-right: 10px;
+  
+  
+  /* Estilo al enfocar */
+  select:focus {
+    outline: none;
+    border-color: #04d38b;
+  }
+  
+
+
+  /* Estilo cuando está deshabilitado */
+  select:disabled {
+    opacity: 0.6;
+  }
+  
+  /* Estilo para las opciones */
+  option {
+    padding: 0.5em;
+    background-color: #fff;
+  }
+  
+  /* Estilo para las opciones al pasar el mouse */
+  option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilo para las opciones seleccionadas */
+  option:checked {
+    background-color: #04d38b;
+    color: #fff;
+  }
+
+}
+
+.Usuarios{
+    margin-top: 15px;
+}
+
+.anadir_Usuario{
+    display: block;
+    padding: 10px 15px;
+    width: 100px;
+    background-color: #17ee2c;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+.anadir_Usuario:hover{
+    scale:1.1;
+    transition: 0.2s;
+}
+
+.anadir_Usuario:active{
+    scale:0.9;
+    transition: 0.2s;
+}
+
+.th_opciones{
+    padding-left: 40px
+}
+
+.H1Escaner{
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.Escaner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    input{
+        padding: 5px;
+        margin: 10px;
+        outline: none;
+        border-radius: 5px;
+        border: #8f8f8f 2px solid;
+    }
+    
+    input:focus {
+        border: 2px solid #04d38ac3;
+    }
+}
+
+.escaner_red{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            padding: 10px 15px;
+            width: 100px;
+            background-color: #17ee2c;
+            border-radius: 5px;
+            font-weight: 600;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.2s;   
+        }
+
+        button:hover{
+            scale:1.1;
+            transition: 0.2s;
+        }
+        
+        button:active{
+            scale:0.9;
+            transition: 0.2s;
+        }
+    }
+}
+
+.escaner_web{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            padding: 10px 15px;
+            width: 100px;
+            background-color: #17ee2c;
+            border-radius: 5px;
+            font-weight: 600;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.2s;   
+        }
+
+        button:hover{
+            scale:1.1;
+            transition: 0.2s;
+        }
+        
+        button:active{
+            scale:0.9;
+            transition: 0.2s;
+        }
+    }
+}
+
+
+.opcion{
+    margin: 0px;
+    padding: 0px;
+    width: 20px;
+}
+
+.thopcion{
+    width: 350px;
+}
+
+.acciones{
+    display: flex;
+    flex-direction: row;
+}
+
+.accion_eliminar {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #e52d27, #b31217); /* Degradado rojo intenso */
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+/* Efecto hover con sombra y cambio de color */
+.accion_eliminar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d32f2f, #a91c1c);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de clic con reducción de tamaño */
+.accion_eliminar:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+/* Agregar un pequeño icono antes del texto */
+.accion_eliminar::before {
+    font-size: 16px;
+}
+
+/* Animación de fondo al hacer clic */
+.accion_eliminar:focus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.accion_eliminar:focus {
+    outline: none;
+}
+
+.accion_eliminar:focus::after {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+.accion_descargar {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #2847f7, #02c47b);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+/* Efecto hover con sombra y cambio de color */
+.accion_descargar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2847f7, #02c47b);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de clic con reducción de tamaño */
+.accion_descargar:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+/* Agregar un pequeño icono antes del texto */
+.accion_descargar::before {
+    font-size: 16px;
+}
+
+/* Animación de fondo al hacer clic */
+.accion_descargar:focus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.accion_descargar:focus {
+    outline: none;
+}
+
+.accion_descargar:focus::after {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+/* Estilos generales de la celda */
+th.seleccionarTodos, td.seleccionar{
+    background-color: #262525;  /* Color de fondo oscuro */
+    color: #ffffff;        /* Color blanco para el texto */
+    font-weight: 500;   /* Peso de la fuente */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    margin: 0px;
+    padding: 0px;
+  }
+
+  /* Estilo del checkbox */
+  th.seleccionarTodos, td.seleccionar{
+    accent-color: #ffffff; /* Color blanco para el checkbox */
+    cursor: pointer;  /* Mostrar el cursor como puntero */
+    width: 50px;       /* Reducir el tamaño del checkbox */
+    height: 16px;      /* Reducir el tamaño del checkbox */
+  }
+
+    input[type="checkbox"]{
+        width:15px;     /* Reducir el tamaño del checkbox */
+        height: 16px;
+    }
+  
+  /* Cuando el checkbox está seleccionado, cambiar el color */
+  th.seleccionarTodos, td.seleccionar, input[type="checkbox"]:checked {
+    accent-color: #5f4ad8;  /* Color verde cuando está seleccionado */
+  }
+  
+  /* Estilo del texto "Seleccionar Todo" */
+  th.seleccionarTodos .seleccionar_todo_text {
+    font-size: 14px;    /* Tamaño de fuente más pequeño */
+    font-weight: 500;
+    color: #ffffff;     /* Color blanco para el texto */
+    transition: color 0.3s ease;
+  }
+  
+  /* Cambio de color cuando el mouse pasa por encima */
+  th.seleccionarTodos:hover {
+    background-color: #333333; /* Fondo ligeramente más oscuro en hover */
+    color: #ffffff;  /* Color de texto blanco en hover */
+  }
+  
+  /* Estilo cuando el checkbox está marcado */
+  th.seleccionarTodos input[type="checkbox"]:checked + .seleccionar_todo_text {
+    font-weight: 700; /* Hacer el texto negrita cuando está seleccionado */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Estilos de la tabla */
+.tabla-escaner {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tabla-escaner th, .tabla-escaner td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.tabla-escaner th {
+    background-color: #262525;
+    color: white;
+}
+
+/* Estilos de estado */
+.estado-pendiente { color: orange; }
+.estado-en_progreso { color: blue; }
+.estado-completado { color: green; }
+.estado-fallido { color: red; }
+
+/* Botón para nuevo escaneo */
+.btn-nuevo-escaner {
+    padding: 10px 15px;
+    background-color: #04d38b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-nuevo-escaner:hover {
+    background-color: #039a67;
+}
+
+.cerrar-modal {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Botones de opciones en el modal */
+.opciones-escaneo {
+    display: flex;
+    align-content: center;
+    justify-content: start;
+    margin: 20px 0;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal:target {
+    display: flex;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: start;
+    align-items: start;
+    align-content: start;
+}
+
+/* Cerrar el modal */
+.cerrar-modal {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    float: right;
+}
+
+/* Opciones de escaneo */
+.opciones-escaneo {
+    margin-bottom: 15px;
+}
+
+.opciones-escaneo select {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Estilo de los formularios */
+.formulario-escaneo {
+    display: none;
+    margin-left: 20px;
+
+    label{
+        font-weight:400 ;
+        font-size: 20px;
+        margin: 7px;
+    }
+
+    input{
+        padding: 5px;
+        margin: 10px;
+        outline: none;
+        border-radius: 5px;
+        border: #8f8f8f 2px solid;
+    }
+    
+    input:focus {
+        border: 2px solid #04d38ac3;
+    }
+
+    button{
+        padding: 10px 15px;
+        background-color: #000000;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+        height: 35px;
+
+    }
+}
+.butsub:hover{
+    scale:1.1;
+    transition: 0.2s;
+}
+
+.butsub:active{
+    scale:0.9;
+    transition: 0.2s;
+}
+
+/* Mostrar el formulario de Escanear Red */
+#formEscanearRed {
+    display: none;
+}
+
+/* Mostrar el formulario de Escanear Web */
+#formEscanearWeb {
+    display: none;
+}
+
+
+.btn-abrir-modal{
+    padding: 10px 15px;
+    background-color: #000000;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    height: 35px;
+}
+
+.btn-abrir-modal:hover{
+    scale:1.1;
+    transition: 0.2s;
+}
+
+.btn-abrir-modal:active{
+    scale:0.9;
+    transition: 0.2s;
+}
+
+
+.form_escan{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-contenido{
+    display: flex;
+    flex-direction: row;
+}
+
+.divisor_escan, .divisor_escan2{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+
+
+/* progress {
+    width: 100%;
+    height: 20px;
+}
+
+#vulnerabilities-list ul {
+    list-style-type: none;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.error-msg {
+    color: red;
+} */
+
+
+
+/* Contenedor principal */
+.contenedor_dashboard {
+    margin: 10px;
+}
+
+.TituloVulRiesg{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+}
+
+/* Contenedor para las tarjetas */
+.dashboard-stats {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    justify-items: start;
+    align-self: start;
+    gap: 7px;
+    width: 20%;
+}
+
+.dashboard-card-superior{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    margin: 10px auto;
+    text-align: center;
+    height: 230px;
+}
+
+.content-cards{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+
+}
+
+/* Tarjetas de estadísticas */
+.dashboard-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    margin: 10px;
+    height: 70px;
+}
+
+.dashboard-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.cards{
+    cursor: pointer;
+    border-radius: 50%;
+    transition: ease 0.5s;
+    text-decoration: none;
+    color: #000000;
+    h3{
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    
+}
+
+.cards:hover{
+    transform: scale(1.2);
+    transition: ease 0.3s;
+}
+
+.card-value {
+    font-size: 2em;
+    font-weight: 300;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Colores según riesgo */
+.card-value[data-riesgo="alto"] {
+    background-color: #ff6347;
+    color: white;
+}
+
+.card-value[data-riesgo="medio"] {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.card-value[data-riesgo="bajo"] {
+    background-color: #32cd32;
+    color: white;
+}
+
+/* Barra de progreso */
+/* .dashboard_progreso {
+    margin-top: 30px;
+    text-align: center;
+} */
+
+/* #progreso {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+#porcentaje {
+    font-size: 1.2em;
+    margin-top: 10px;
+} */
+
+/* Lista de vulnerabilidades */
+.vulnerabilities-list {
+    margin-top: 30px;
+}
+
+.vulnerabilities-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.vulnerabilities-list li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vulnerability-status {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.contenedor_stats_grafico{
+    display: flex;
+    gap: 50px;
+}
+
+#contenedor_graficos{
+    text-align: center;
+    h2{
+        font-weight: 300;
+    }
+    
+    width: 80%;
+    height:300px;
+    display: inline-block;
+}
+
+
+.div_graficos{
+    display: flex;
+    width: 100%;
+    height: 95%;
+    justify-content:center;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.grafico{
+    width: 60%;
+    height: 90%;
+}
+
+

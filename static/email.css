@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./IMG/123.jpg);
+    backdrop-filter: blur(70px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    outline: none;
+    box-shadow: 0px 0 6px #000000;
+    padding: 10px;
+    text-align: center;
+
+
+    h2{
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: #ffffff;
+        text-shadow: 0px 0 2px #000000 ;
+    }
+
+    input{
+        padding: 10px 15px;
+        margin: 10px;
+        outline: none;
+        border: #ccc 2px solid;
+        border-radius: 8px;
+        box-shadow: 0px 0 2px #000000;
+        height: 33px;
+    }
+
+    input:focus{
+        border: 2px solid black
+    }
+    
+    label{
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 450;
+        text-shadow: 0px 0 2px #000000 ;
+    }
+
+    .boton{
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        box-shadow: 0px 0 5px #000000;
+        color: #ffffff;
+        transition: all .3s ease-in-out;
+        padding: 8px 15px;
+        border-radius:10px ;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    
+    .boton:hover{
+        background-color:  #000000;
+        color:#ffffff
+    }
+    
+    .error {
+        border: 1px solid red;
+    }
+    
+    .error-msg {
+        color: #E53935;
+        font-size: 12px;
+    }
+
+    p{
+        color:white;
+        font-size: 18px;
+        text-shadow: 0px 0 2px #000000 ;
+    }
+
+    a{
+        font-size: 18px;
+        text-decoration: none;
+        color: rgb(8, 0, 255);
+        text-shadow: none;
+        transition: 0.2s ease;
+    }
+
+    a:hover{
+        color: rgb(3, 1, 54);
+        transition: 0.2s ease;
+    }
+
+}
+
