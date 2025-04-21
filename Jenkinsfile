@@ -2,16 +2,11 @@ pipeline {
     agent any
 
     environment {
-        SONAR_HOST = 'http://localhost:9000' // Cambiar si es remoto
+        SONAR_HOST = 'https://sonarcloud.io/account/security' // Cambiar si es remoto
         SONAR_TOKEN = credentials('sonar-token') // ID de credencial en Jenkins
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
 
         stage('SonarQube Scan') {
             steps {
