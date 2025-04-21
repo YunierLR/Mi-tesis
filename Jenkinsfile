@@ -9,7 +9,7 @@ pipeline {
         }
         stage('SonarCloud Analysis') {
             environment {
-                SONAR_TOKEN = credentials('sonar-token') // Asegúrate de tener este token creado en Jenkins
+                SONAR_TOKEN = credentials('SONAR_TOKEN') // Asegúrate de tener este token creado en Jenkins
             }
             steps {
                 withSonarQubeEnv('SonarLocal') {
