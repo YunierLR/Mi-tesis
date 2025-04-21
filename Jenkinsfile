@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    environment {
-        SONAR_TOKEN = credentials('SONAR_TOKEN') // ID de la credencial en Jenkins
-    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -18,7 +16,6 @@ pipeline {
                       -D"sonar.organization=yunierlr" `
                       -D"sonar.sources="" `
                       -D"sonar.host.url=https://sonarcloud.io" `
-                      -D"sonar.login=$SONAR_TOKEN
                     """
                 }
             }
