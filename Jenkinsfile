@@ -11,7 +11,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarLocal') {
                     bat """
-                    sonar-scanner.bat ^
+                    C:\\Users\\Yunier\\.jenkins\\workspace\\MiTesis\\TesisOficial\\sonar-scanner-7.0.2.4839-windows-x64\\bin\\sonar-scanner.bat ^
                       -Dsonar.projectKey=YunierLR_Mi-tesis ^
                       -Dsonar.organization=yunierlr ^
                       -Dsonar.sources=. ^
