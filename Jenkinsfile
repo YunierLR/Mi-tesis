@@ -8,18 +8,23 @@ pipeline {
             }
         }
         stage('SonarCloud Analysis') {
+            environment {
+                SONAR_TOKEN = credentials('sonar-token') // Asegúrate de tener este token creado en Jenkins
+            }
             steps {
                 withSonarQubeEnv('SonarLocal') {
-                    sh """
-                    sonar-scanner \
-                      -D"sonar.projectKey=YunierLR_Mi-tesis" `
-                      -D"sonar.organization=yunierlr" `
-                      -D"sonar.sources="" `
-                      -D"sonar.host.url=https://sonarcloud.io" `
+                    bat """
+                    sonar-scanner.bat ^
+                      -Dsonar.projectKey=YunierLR_Mi-tesis ^
+                      -Dsonar.organization=yunierlr ^
+                      -Dsonar.sources=. ^
+                      -Dsonar.host.url=https://sonarcloud.io ^
+                      -Dsonar.login=%SONAR_TOKEN%
                     """
                 }
             }
         }
     }
 }
+
 
