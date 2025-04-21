@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+//Esto es una prueba
     stages {
         stage('SonarCloud Analysis') {
             steps {
