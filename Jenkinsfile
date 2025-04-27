@@ -2,6 +2,7 @@ pipeline {
     agent any
 //Esto es una prueba 2
     stages {
+        //Prueba de GitHub
         stage('SonarCloud Analysis') {
             steps {
                 withSonarQubeEnv('SonarLocal') {
